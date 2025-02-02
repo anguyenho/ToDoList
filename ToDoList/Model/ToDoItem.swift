@@ -5,14 +5,26 @@
 //  Created by Ainsley Quyen Nguyenho on 2025-02-01.
 //
 
-import SwiftUI
+import Foundation
 
-struct ToDoItem: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+struct ToDoItem {
+    let id = UUID()
+    var title: String
+    var done: Bool
 }
 
-#Preview {
-    ToDoItem()
-}
+let firstItem = ToDoItem(title: "Study for chemisry test", done: false)
+
+let secondItem = ToDoItem(title: "Finish comp sci assignment", done: true)
+
+let thirdItem = ToDoItem(title: "Go for a run around campus", done: false)
+
+let exampleItems = [
+    firstItem
+    ,
+    secondItem
+    ,
+    thirdItem
+    ,
+    
+]

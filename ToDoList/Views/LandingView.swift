@@ -24,7 +24,7 @@ struct LandingView: View {
                 
                 List {
                    
-                    Text("Study for chemistry text")
+                    Text("Study for chemistry test")
                     Text("Finish comp sci assignment")
                     Text("Go for a run around campus")
                 }
