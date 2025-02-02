@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct ItemView: View {
+    
+    let currentItem: ToDoItem
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Label(
+            title: {
+                Text(currentItem.title)
+            }, icon: {
+                Image(systemName: currentItem.done == true ? "checkmark.circle" : "circle")
+            }
+        )
     }
 }
 
 #Preview {
-    ItemView()
+    List {
+        ItemView(currentItem: firstItem)
+        ItemView(currentItem: secondItem)
+    }
 }
