@@ -4,20 +4,33 @@
 //
 //  Created by Ainsley Quyen Nguyenho on 2025-01-28.
 //
-
 import SwiftUI
 
 struct LandingView: View {
     
-    // MARK: stored properties
+    // MARK: Stored properties
     
-    // Item being added 
+    // Item being added
+    @State var newItemDescription: String = ""
+    
+    // Search text
+    @State var searchText = ""
+    
+    // MARK: Computed properties
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            
+            VStack {
+                
+                List {
+                   
+                    Text("Study for chemistry text")
+                    Text("Finish comp sci assignment")
+                    Text("Go for a run around campus")
+                }
+                .searchable(text: $searchText)
+            }
+            .navigationTitle("To Do")
         }
         .padding()
     }
