@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LandingView: View {
+    
+    // MARK: stored properties
+    
+    // Item being added 
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +24,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    LandingView()
 }
